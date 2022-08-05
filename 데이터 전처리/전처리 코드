@@ -1,9 +1,9 @@
 import pandas as pd
 import os
-os.chdir('사용할 파일 디렉토리')
+os.chdir(r'사용할 파일 디렉토리')
 
 # 인구수 데이터 전처리
-data = pd.read_excel('./행정구역_시군구_별__성별_인구수_2009-2019.xlsx')
+data = pd.read_excel('행정구역_시군구_별__성별_인구수_2009-2019.xlsx')
 people = pd.DataFrame()
 people['지역'] = data['행정구역(시군구)별']
 for i in range(2009, 2020):
@@ -25,7 +25,7 @@ people_final = pd.concat([people_2009, people_2010, people_2011, people_2012, pe
 people_final.columns = ['지역', 'year', 'people']
 
 # 지역별 면적 데이터 전처리
-data = pd.read_excel('./지역별_면적_20220804110648.xlsx')
+data = pd.read_excel('지역별_면적_20220804110648.xlsx')
 df_prep = data.iloc[16:, :].reset_index(drop = True)
 ground = pd.DataFrame()
 ground['지역'] = df_prep['남북한별']
@@ -47,8 +47,8 @@ df_ground = pd.concat([ground_2009, ground_2010, ground_2011, ground_2012, groun
 df_ground.columns = ['지역', 'year', '면적'] # narrow form
 
 # 공공체육시설 수 데이터 전처리
-data_1 = pd.read_excel('./체육시설_2009~2015.xlsx')
-data_2 = pd.read_excel('./체육시설_2016~2019.xlsx')
+data_1 = pd.read_excel('체육시설_2009~2015.xlsx')
+data_2 = pd.read_excel('체육시설_2016~2019.xlsx')
 data = pd.merge(data_1, data_2)
 data_plot = pd.DataFrame()
 for i in range(2009, 2020):
