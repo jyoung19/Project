@@ -43,6 +43,7 @@ ground_2017 = ground.melt(id_vars = '지역', value_vars = '2017')
 ground_2018 = ground.melt(id_vars = '지역', value_vars = '2018')
 ground_2019 = ground.melt(id_vars = '지역', value_vars = '2019')
 df_ground = pd.concat([ground_2009, ground_2010, ground_2011, ground_2012, ground_2013, ground_2014, ground_2015, ground_2016, ground_2017, ground_2018, ground_2019]).reset_index(drop = True)
+df_ground = df_ground.dropna(axis = 0).reset_index(drop = True)
 df_ground.columns = ['지역', 'year', '면적'] # narrow form
 
 # 공공체육시설 수 데이터 전처리
