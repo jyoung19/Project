@@ -28,7 +28,7 @@ people_final.columns = ['지역', 'year', 'people']
 data = pd.read_excel('지역별_면적_20220804110648.xlsx')
 df_prep = data.iloc[16:, :].reset_index(drop = True)
 ground = pd.DataFrame()
-ground['지역'] = df_prep['남북한별 ']
+ground['지역'] = people_final['지역']
 for i in range(2009, 2020):
   ground[str(i)] = df_prep[str(i)]
 ground_2009 = ground.melt(id_vars = '지역', value_vars = '2009')
