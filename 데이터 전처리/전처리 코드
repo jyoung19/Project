@@ -31,7 +31,6 @@ ground = pd.DataFrame()
 ground['지역'] = df_prep['남북한별 ']
 for i in range(2009, 2020):
   ground[str(i)] = df_prep[str(i)]
-ground = ground.replace('-', 465.0) # 세종시 면적 # 얘는 wide form
 ground_2009 = ground.melt(id_vars = '지역', value_vars = '2009')
 ground_2010 = ground.melt(id_vars = '지역', value_vars = '2010')
 ground_2011 = ground.melt(id_vars = '지역', value_vars = '2011')
