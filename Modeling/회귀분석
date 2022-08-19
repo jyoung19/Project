@@ -1,6 +1,10 @@
-import pandas as pd
 import os
 os.chdir(r'사용할 파일 디렉토리')
+import pandas as pd
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+import seaborn as sns
+from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 ### 데이터 불러오기 및 전처리
 data_normal = pd.read_excel('정규화한 데이터.xlsx')
@@ -21,7 +25,6 @@ list = data_normal.columns
 X_normal = data_normal[list[:-1]]
 
 ### heatmap 그려 변수 간 공선성 확인
-import matplotlib.pyplot as plt
 corr = X_normal.corr()
 sns.heatmap(corr[(corr >= 0.7) | (corr <= -0.7)], 
             cmap='viridis', vmax=1.0, vmin=-1.0, linewidths=0.1,
