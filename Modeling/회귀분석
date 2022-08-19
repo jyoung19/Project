@@ -4,7 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import seaborn as sns
-from statsmodels.stats.outliers_influence import variance_inflation_factor
 
 ### 데이터 불러오기 및 전처리
 data_normal = pd.read_excel('정규화한 데이터.xlsx')
