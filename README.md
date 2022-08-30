@@ -1,23 +1,30 @@
 # Project
 
-
-
 ## 주제
 - 공공체육시설 위치 추천 모델 개발
 
-
-
 ## 진행 과정
-### 1. 데이터 수집
+### 0. 전처리
+- 클러스터별 공체시설 비율 > 클러스터별로_공체시설_비율.ipynb 파일 실행
 
-### 2. 데이터 전처리 [바로가기](https://github.com/jyoung19/Project/tree/main/%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%A0%84%EC%B2%98%EB%A6%AC)
 
-### 3. EDA [바로가기](https://github.com/jyoung19/Project/tree/main/EDA)
+### 1. EDA
+- EDA > readme.md 순서대로 따라가면 됩니다.
 
-### 4. 모델링 [바로가기](https://github.com/jyoung19/Project/tree/main/Modeling)
-- 회귀분석
-- k-means clustering
 
-### 5. 시각화 [바로가기](https://github.com/jyoung19/Project/tree/main/%EC%8B%9C%EA%B0%81%ED%99%94)
-- folium
+### 2. Modeling 
+- Modeling > readme.md 순서대로 따라가면 됩니다.
+
+
+### 3. 시각화
+- 2020 기준 서울시 공공체육시설 분포
+  - 체육시설지도 > 체육시설지도.py 파일 실행
+  - 서울시전체시각화 > 전국시도별 지도.ipynb 파일 실행
+  
+- 수요 미만으로 지어진 자치구 (11개)
+  - 자치구별 입지선정 : 시각화 > readme.md 순서대로 따라가시면 됩니다.
+  - 공공체육시설 설치 전후로 비율 비교 : 서울시전체시각화 > 설치 전후비율 지도시각화.ipynb 파일 실행
+  
+- 수요 이상으로 지어진 자치구 (14개)
+  - 서울시전체시각화+체육시설위치 > 수요 충족 자치구(14개) 시각화.ipynb 파일 실행
 
